@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.logo-navbar {
+    margin-right: 10px;
+}
+
+.container {
+    width: 100%;
+}
+.navbar-expand-lg {
+    background-color: #2a356c;
+}
+
+.navbar-brand {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    margin-left: 5px;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 24px;
+}
+
+.jumbotron {
+    padding: 24px 64px;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    background-image: url("/assets/img/bgjumbotron.jpg");
+    background-color: grey;
+    background-blend-mode: multiply;
+    position: relative;
+    background-size: cover;
+    color: white;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.jumbotron .lead {
+    margin-top: 20px;
+    font-weight: light;
+    font-size: 15px;
+}
+
+.jumbotron .display-4 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: normal;
+}
+
+.jumbotron .btn-outline-light {
+    background-color: #2a356c;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: end;
+}
+
+.icon-class {
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0020b8;
+    margin-bottom: 16px;
+    margin-left: 12px;
+}
+
+@media (max-width: 767px) {
+    .jumbotron {
+        padding: 0 12px;
+        background-position-x: 60%;
+        height: min-content;
+    }
+
+    .navbar {
+        padding: 8px 8px;
+    }
+
+    .navbar-brand {
+        font-size: 10px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 36px;
+        margin-top: 24px;
+    }
+
+    .icon-class {
+        width: 40px;
+        height: 40px;
+    }
+}
