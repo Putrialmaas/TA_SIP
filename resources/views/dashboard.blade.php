@@ -1,65 +1,92 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SISTEM PRAKERIN SMKN 1 ADIWERNA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/dashboard.css">
-</head>
+@extends('layout')
+@section('content')
 
 <body>
-  <nav class="navbar justify-content-between navbar-expand-lg">
-    <div class="logo">
-      <a class="navbar-brand-two d-inline-block ml-1" href="#">
-        <img src="assets/img/logosmk.png" alt="Logo" width="40" height="40" class="logo-navbar" />
-      </a>
-      <a class="navbar-brand href=" #">SEKOLAH MENENGAH KEJURUAN
-        <br>NEGERI 1 ADIWERNA</a>
+    
+    <div class="jumbotron">
+        <div class="hero">
+            <h1 class="display-4">Sistem Informasi Prakerin
+                <br>SMKN 1 Adiwerna
+            </h1>
+            <p class="lead">Sistem Informasi Prakerin merupakan situs web yang digunakan untuk membantu Siswa
+                <br>SMKN 1 Adiwerna, Guru, dan Tenaga Kependidikan dalam pelaksanaan Praktik Kerja Lapangan.
+            </p>
+            <p class="lead">
+                <a class="btn btn-outline-light" href="#" role="button">Informasi Prakerin</a>
+            </p>
+            <link rel="stylesheet" type="text/css" href="dashboard.css">
+        </div>
+        <div class="icon-container">
+            <a class="icon-class" href="https://www.instagram.com/smknegeri1adiwerna/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5">
+                    </rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a class="icon-class" href="https://www.facebook.com/groups/stmadbtegal/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-facebook">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+            <a class="icon-class" href="https://twitter.com/stmadbtegal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-twitter">
+                    <path
+                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                    </path>
+                </svg>
+            </a>
+            <a class="icon-class" href="https://www.youtube.com/c/ADBtv/channels">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-youtube">
+                    <path
+                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                    </path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </a>
+        </div>
     </div>
-    <button type="button" class="d-flex btn btn-outline-light">Login</button>
-  </nav>
-  <div class="jumbotron">
-    <div class="hero">
-      <h1 class="display-4">Sistem Informasi Prakerin
-        <br>SMKN 1 Adiwerna
-      </h1>
-      <p class="lead">Sistem Informasi Prakerin merupakan situs web yang digunakan untuk membantu Siswa
-        <br>SMKN 1 Adiwerna, Guru, dan Tenaga Kependidikan dalam pelaksanaan Praktik Kerja Lapangan.
-      </p>
-      <p class="lead">
-        <a class="btn btn-outline-light" href="#" role="button">Informasi Prakerin</a>
-      </p>
-      <link rel="stylesheet" type="text/css" href="dashboard.css">
+
+    {{-- Card Kegiatan Prakerin --}}
+    <div class="judulcard">
+        Kegiatan Prakerin
     </div>
-    <div class="icon-container">
-      <a class="icon-class" href="https://www.instagram.com/smknegeri1adiwerna/">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </a>
-      <a class="icon-class" href="https://www.facebook.com/groups/stmadbtegal/">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-      </a>
-      <a class="icon-class" href="https://twitter.com/stmadbtegal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
-          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-      </a>
-      <a class="icon-class" href="https://www.youtube.com/c/ADBtv/channels">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube">
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-        </svg>
-      </a>
+    <div style="width: 100%; display: flex; justify-content: space-evenly; margin: 16px 0;">
+        <div class="card" style="width: 18rem; padding: 1rem; margin: 4px">
+            <img src="assets/img/fotoprak1.png" class="card-img-top" style="height: 300px ;object-fit:cover" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; padding: 1rem; margin: 4px">
+            <img src="assets/img/fotoprak1.png" class="card-img-top" style="height: 300px ;object-fit:cover" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; padding: 1rem; margin: 4px">
+            <img src="assets/img/fotoprak1.png" class="card-img-top" style="height: 300px ;object-fit:cover" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
+    </div>
 </body>
 
-</html>
+@stop
