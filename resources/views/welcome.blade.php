@@ -14,7 +14,7 @@
             <p class="lead">
                 <a class="btn btn-outline-light" href="#" role="button">Informasi Prakerin</a>
             </p>
-            <link rel="stylesheet" type="text/css" href="dashboard.css">
+            <link rel="stylesheet" type="text/css" href="welcome.css">
         </div>
         <div class="icon-container">
             <a class="icon-class" href="https://www.instagram.com/smknegeri1adiwerna/">
