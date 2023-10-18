@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('style')
-<link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="container">
@@ -14,11 +14,11 @@
                         <div class="text-lg">
                             <p>Sistem Informasi Prakerin SMKN 1 Adiwerna</p>
                         </div>
-                        
+
                     </div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="get" action="{{ route('siswa.index') }}">
                             @csrf
 
                             <div class="row mb-3">
@@ -68,9 +68,10 @@
                                 </div>
                             </div> --}}
 
+
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" href="/home">
                                         {{ __('Login') }}
                                     </button>
 

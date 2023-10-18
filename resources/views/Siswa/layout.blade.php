@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{asset('assets/img/logosmk.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/img/logosmk.png') }}" type="image/x-icon">
     <title>SISTEM PRAKERIN SMKN 1 ADIWERNA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -16,7 +16,7 @@
 
     {{-- navigation bar --}}
     <nav class="navbar fixed-top justify-content-between navbar-expand-lg">
-        <div class="logo">
+        <div class="logo-home">
             <a class="navbar-brand-two d-inline-block ml-1" href="#">
                 <img src="assets/img/logosmk.png" alt="Logo" width="40" height="40" class="logo-navbar" />
             </a>
@@ -24,18 +24,36 @@
                 <a href="{{ route('welcome') }}" style="text-decoration: none;">
                     <strong class="text-white">
                         SEKOLAH MENENGAH KEJURUAN
-                    <br>NEGERI 1 ADIWERNA
+                        <br>NEGERI 1 ADIWERNA
                     </strong>
                 </a>
             </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0" style="margin-left: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('siswa.index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Permohonan Prakerin </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Pengisian Jurnal </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Pengumpulan Laporan </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <a href="{{ route('login') }}">
-            <button type="button" class="d-flex btn btn-outline-light">Login</button>
-        </a>
 
     </nav>
 
-    @yield('content')
+    @yield('dashboard')
     {{-- <div class="isi">
         
     </div> --}}

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +18,10 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
-Route::get('/login', [LoginController::class, 'index'])->name('loginpage');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+Route::get('/home', [SiswaController::class, 'index'])->name('siswa.index');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
