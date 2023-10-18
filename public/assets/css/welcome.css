@@ -4,18 +4,19 @@
     margin-right: 10px;
 }
 
-.isi {
+/* .isi {
     width: 100%;
-}
+} */
 
 .navbar-expand-lg {
     background-color: #2a356c;
 }
 
 .navbar-brand {
+    font-family: Poppins;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
     margin-left: 5px;
 }
@@ -249,7 +250,12 @@
     }
 
     .icon-size {
-        max-width: 12px;
+        max-width: 14px;
         max-height: 14px;
+    }
+
+    .maps-image-size {
+        max-width: 90px;
+        max-height: 70px;
     }
 }
