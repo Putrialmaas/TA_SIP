@@ -4,29 +4,8 @@
     font-family: Poppins;
 }
 
-.logo-navbar {
-    margin-right: 10px;
-}
 
-.navbar-brand {
-    font-family: Poppins;
-}
-
-.nav-link {
-    font-family: Poppins;
-    font-size: 14px;
-    color: #ffffff;
-}
-
-
-.logo-home {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.nav-item .nav-link.active {
+.nav-item .nav-link.active1 {
     color: #FFA901;
 }
 
@@ -71,4 +50,3 @@
 .card-text.mt-4 {
     padding-bottom: 12px;
 }
-

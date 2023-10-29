@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="get" action="{{ route('siswa.index') }}">
+                        <form method="get" action="{{ route('siswa.dashboard') }}">
                             @csrf
 
                             <div class="row mb-3">

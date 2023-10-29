@@ -2,6 +2,7 @@
 @section('dashboard')
 
     <link href="{{ asset('assets/css/siswa/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/siswa/layout.css') }}" rel="stylesheet">
 
     <div class="cont-1 container-fluid" style="margin-top: 90px">
         <div class="alert alert-success d-flex align-items-center" role="alert">

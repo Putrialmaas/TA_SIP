@@ -8,6 +8,7 @@
     <title>SISTEM PRAKERIN SMKN 1 ADIWERNA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <link rel="stylesheet" href="assets/css/welcome.css">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
@@ -36,16 +37,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav  mb-2 mb-lg-0" style="margin-left: auto;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('siswa.index') }}">Home</a>
+                        <a class="nav-link active1" aria-current="page" href="{{ route('siswa.dashboard') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Permohonan Prakerin </a>
+                        <a class="nav-link active2" href="{{ route('siswa.permohonan') }}"> Permohonan Prakerin </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Pengisian Jurnal </a>
+                        <a class="nav-link active3" href="{{ route('siswa.jurnal') }}"> Pengisian Jurnal </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Pengumpulan Laporan </a>
+                        <a class="nav-link active4" href="{{ route('siswa.laporan') }}"> Pengumpulan Laporan </a>
                     </li>
                 </ul>
             </div>
@@ -54,6 +55,9 @@
     </nav>
 
     @yield('dashboard')
+    @yield('permohonan')
+    @yield('jurnal')
+    @yield('laporan')
     {{-- <div class="isi">
         
     </div> --}}
@@ -66,7 +70,7 @@
             </div>
             <div style="width: 50%; height: 100%; margin-right: auto;">
                 <div class="contact">
-                    <p class="judul">SMKN 1 ADIWERNA</p>
+                    <p class="judulfooter">SMKN 1 ADIWERNA</p>
                     <ul class="list-unstyled">
                         <li>
                             <div class="icon-contact">
