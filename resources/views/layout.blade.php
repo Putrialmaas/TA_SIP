@@ -48,7 +48,7 @@
             </div>
             <div style="width: 50%; height: 100%; margin-right: auto;">
                 <div class="contact">
-                    <p class="judul">SMKN 1 ADIWERNA</p>
+                    <p class="judulfooter">SMKN 1 ADIWERNA</p>
                     <ul class="list-unstyled">
                         <li>
                             <div class="icon-contact">

@@ -10,4 +10,19 @@ class SiswaController extends Controller
     {
         return view('siswa.dashboard');
     }
+
+    public function permohonan() 
+    {
+        return view('siswa.permohonan');
+    }
+
+    public function jurnal() 
+    {
+        return view('siswa.jurnal');
+    }
+
+    public function laporan() 
+    {
+        return view('siswa.laporan');
+    }
 }
