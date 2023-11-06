@@ -4,20 +4,15 @@
 <head>
     <!-- Custom fonts for this template -->
     <link rel="icon" href="{{ asset('assets/img/logosmk.png') }}" type="image/x-icon">
-    <title>Admin Prakerin</title>
-
+    <title>Guru Pembimbing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    {{-- <link rel="stylesheet" href="path-to-bootstrap-css/bootstrap.min.css">
-    <script src="path-to-jquery/jquery.min.js"></script>    
-    <script src="path-to-bootstrap-js/bootstrap.min.js"></script> --}}
     <!-- Custom styles for this template -->
-    <link href="{{ asset('assets/css/Admin/vendor/sb-admin-2.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/Guru/vendor/sb-admin-2.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this page -->
     <link href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
@@ -67,7 +62,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.dashboard') }}">
+                <a class="nav-link" href="{{ route('guru.dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -82,9 +77,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('admin.permohonan') }}">
-                    <i class="fas fa-user"></i>
-                    <span>Permohonan Prakerin</span>
+                <a class="nav-link collapsed" href="{{ route('guru.siswabimbingan') }}">
+                    <i class="fas fa-users"></i>
+                    <span>Siswa Bimbingan</span>
                 </a>
                 {{-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -99,18 +94,15 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-users"></i>
-                    <span>Data</span>
+                    <i class="fas fa-file-alt"></i>
+                    <span>Dokumen</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('admin.datasiswa') }}">Siswa</a>
-                        <a class="collapse-item" href="{{ route('admin.dataguru') }}">Guru Pembimbing</a>
-                        <a class="collapse-item" href="{{ route('admin.datatempatprakerin') }}">Tempat
-                            Prakerin</a>
-                        <a class="collapse-item" href="{{ route('admin.datapembagianpembimbing') }}">Pembagian
-                            Pembimbing</a>
+                        <a class="collapse-item" href="{{ route('admin.datasiswa') }}">Surat Monitoring</a>
+                        <a class="collapse-item" href="{{ route('admin.dataguru') }}">Surat Penarikan</a>
+                        
                     </div>
                 </div>
             </li>
@@ -125,22 +117,19 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('admin.informasiprakerin') }}">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Informasi Prakerin</span>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-copy"></i>
+                    <span>Laporan</span>
                 </a>
-                {{-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('admin.datasiswa') }}">Pengumpulan Laporan</a>
+                        <a class="collapse-item" href="{{ route('admin.dataguru') }}">Nilai Laporan</a>
+                        
                     </div>
-                </div> --}}
+                </div>
             </li>
 
             {{-- <!-- Nav Item - Charts -->
@@ -387,12 +376,8 @@
                 <div class="container-fluid">
 
                     @yield('dashboard')
-                    @yield('permohonan')
-                    @yield('datasiswa')
-                    @yield('dataguru')
-                    @yield('datatempatprakerin')
-                    @yield('datapembagianpembimbing')
-                    @yield('informasiprakerin')
+                    @yield('siswabimbingan')
+                    
 
                 </div>
                 <!-- /.container-fluid -->
@@ -441,7 +426,7 @@
 
 
 
-
+    
 
     <script>
         $(function() {
@@ -468,6 +453,7 @@
                 }
             });
         });
+        
     </script>
 
     @yield('script')

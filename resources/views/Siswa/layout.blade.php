@@ -8,7 +8,7 @@
     <title>SISTEM PRAKERIN SMKN 1 ADIWERNA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/welcome.css">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
 </head>
@@ -58,6 +58,7 @@
     @yield('permohonan')
     @yield('jurnal')
     @yield('laporan')
+    @yield('pengaturan')
     {{-- <div class="isi">
         
     </div> --}}
@@ -121,6 +122,10 @@
         </div>
     </div>
     </section>
+
+    @yield('script')
 </body>
+
+    
 
 </html>

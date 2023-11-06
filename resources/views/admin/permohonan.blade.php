@@ -32,16 +32,7 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>NIS</th>
-                                <th>Nama</th>
-                                <th>Jurusan</th>
-                                <th>Tempat Prakerin</th>
-                                <th>Anggota Kelompok</th>
-                                <th>Action</th>
-                            </tr>
-                        </tfoot>
+                        
                         <tbody>
                             <tr>
                                 <td>Tiger Nixon</td>

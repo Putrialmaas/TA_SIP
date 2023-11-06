@@ -25,4 +25,9 @@ class SiswaController extends Controller
     {
         return view('siswa.laporan');
     }
+
+    public function pengaturan() 
+    {
+        return view('siswa.pengaturan');
+    }
 }

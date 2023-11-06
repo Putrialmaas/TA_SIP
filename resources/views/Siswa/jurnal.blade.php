@@ -50,8 +50,7 @@
                 <div class="row mb-4">
                     <label for="keterangan" class="form-label">Keterangan Kegiatan</label>
                     <div class="text-field">
-                        <input class="form-control" style="font-size: 14px;" type="text"
-                            placeholder="Tuliskan Keterangan Harian Anda" aria-label="readonly input example" readonly>
+                        <textarea class="form-control" rows="3"></textarea>
                     </div>
                 </div>
                 <div class="btnpermohonan" style="justify-content: end; display: flex">

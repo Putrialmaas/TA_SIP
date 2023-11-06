@@ -66,7 +66,7 @@
                     <label for="nomorkontak" class="form-label">No. Telp Tempat Prakerin</label>
                     <div class="text-field">
                         <input class="form-control" style="font-size: 14px;" type="text"
-                        placeholder="No. Telp Tempat Prakerin" aria-label="readonly input example" readonly>
+                        placeholder="No. Telepon Tempat Prakerin" aria-label="readonly input example" readonly>
                     </div>
                 </div>
                 <div class="btnpermohonan" style="justify-content: end; display: flex">
@@ -74,9 +74,6 @@
                     <button type="button" class="btn"
                         style="background-color: #44B158; color: #ffffff; margin-left: 10px">Submit</button>
                 </div>
-
-
-
             </div>
         </div>
 
