@@ -20,7 +20,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <p class="modal-title" id="staticBackdropLabel"
-                            style="color: #000000; font-size: 20px; font-weight: 700;">Form Tambah Data Guru Pembimbing</p>
+                            style="color: #000000; font-size: 20px; font-weight: 700;">Tambah Data Guru Pembimbing</p>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
 
                         </button>

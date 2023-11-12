@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/informasi-prakerin', [WelcomeController::class, 'informasiprak'])->name('informasiprak');
+Route::get('/detail', [WelcomeController::class, 'detailinfo'])->name('detailinfo');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 
@@ -41,6 +43,7 @@ Route::get('/data-informasi-prakerin', [AdminController::class, 'informasipraker
 
 Route::get('/dashboard-guru', [GuruController::class, 'index'])->name('guru.dashboard');
 Route::get('/siswa-bimbingan', [GuruController::class, 'siswabimbingan'])->name('guru.siswabimbingan');
+Route::get('/nilai-laporan', [GuruController::class, 'nilailaporan'])->name('guru.nilailaporan');
 
 Auth::routes();
 

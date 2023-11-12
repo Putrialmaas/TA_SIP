@@ -15,4 +15,9 @@ class GuruController extends Controller
     {
         return view('guru.siswabimbingan');
     }
+
+    public function nilailaporan()
+    {
+        return view('guru.nilailaporan');
+    }
 }
