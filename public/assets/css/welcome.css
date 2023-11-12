@@ -47,7 +47,7 @@
     line-height: normal;
     letter-spacing: 0.5px;
     background-image: url("/assets/img/bgjumbotron.jpg");
-    background-color: grey;
+    background-color: rgb(94, 94, 94);
     background-blend-mode: multiply;
     position: relative;
     background-size: cover;
