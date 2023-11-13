@@ -39,11 +39,17 @@ Route::get('/data-guru', [AdminController::class, 'dataguru'])->name('admin.data
 Route::get('/data-tempat-prakerin', [AdminController::class, 'datatempatprakerin'])->name('admin.datatempatprakerin');
 Route::get('/data-pembagian-pembimbing', [AdminController::class, 'datapembagianpembimbing'])->name('admin.datapembagianpembimbing');
 Route::get('/data-informasi-prakerin', [AdminController::class, 'informasiprakerin'])->name('admin.informasiprakerin');
+Route::get('/edit-info', [AdminController::class, 'editinfoprak'])->name('admin.editinfoprak');
 
+Route::get('/trash-siswa', [AdminController::class, 'trashsiswa'])->name('admin.trash.trashsiswa');
+Route::get('/trash-guru', [AdminController::class, 'trashguru'])->name('admin.trash.trashguru');
+Route::get('/trash-pembagian-pembimbing', [AdminController::class, 'trashpembagian'])->name('admin.trash.trashpembagian');
+Route::get('/trash-info-prakerin', [AdminController::class, 'trashinfoprak'])->name('admin.trash.trashinfoprak');
 
 Route::get('/dashboard-guru', [GuruController::class, 'index'])->name('guru.dashboard');
 Route::get('/siswa-bimbingan', [GuruController::class, 'siswabimbingan'])->name('guru.siswabimbingan');
 Route::get('/nilai-laporan', [GuruController::class, 'nilailaporan'])->name('guru.nilailaporan');
+
 
 Auth::routes();
 
