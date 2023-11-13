@@ -61,6 +61,10 @@
             </div>
         </div>
         <!-- Akhir Modal -->
+        <a href="{{ route('admin.trash.trashpembagian') }}"><button type="button" class="btn mt-2 mb-4 ml-2"
+            style="background-color: #fe5a48; color: #ffffff; font-size: 16px;">
+            <i class="fas fa-trash mr-2 ml-1"></i>
+            Trash</button></a>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">

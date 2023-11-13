@@ -2190,12 +2190,14 @@ textarea.form-control {
 .form-check {
     position: relative;
     display: block;
-    padding-left: 1.25rem;
+    padding-left: 2rem;
+    text-align: center;
+    /* justify-content: center; */
 }
 
 .form-check-input {
     position: absolute;
-    margin-top: 0.3rem;
+    margin-top: 0.6rem;
     margin-left: -1.25rem;
 }
 

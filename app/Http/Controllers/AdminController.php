@@ -11,7 +11,7 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function permohonan() 
+    public function permohonan()
     {
         return view('admin.permohonan');
     }
@@ -41,4 +41,28 @@ class AdminController extends Controller
         return view('admin.informasiprakerin');
     }
 
+    public function editinfoprak()
+    {
+        return view('admin.editinfoprak');
+    }
+
+    public function trashsiswa()
+    {
+        return view('admin.trash.trashsiswa');
+    }
+
+    public function trashguru()
+    {
+        return view('admin.trash.trashguru');
+    }
+
+    public function trashpembagian()
+    {
+        return view('admin.trash.trashpembagian');
+    }
+
+    public function trashinfoprak()
+    {
+        return view('admin.trash.trashinfoprak');
+    }
 }

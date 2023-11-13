@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     {{-- <link rel="stylesheet" href="path-to-bootstrap-css/bootstrap.min.css">
     <script src="path-to-jquery/jquery.min.js"></script>    
@@ -39,6 +40,7 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('assets/js/vendor/datatables-demo.js') }}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </head>
 
 <body>
@@ -126,7 +128,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('admin.informasiprakerin') }}">
-                    <i class="fas fa-info-circle"></i>
+                    <i class="fas fa-building"></i>
                     <span>Informasi Prakerin</span>
                 </a>
                 {{-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -393,6 +395,11 @@
                     @yield('datatempatprakerin')
                     @yield('datapembagianpembimbing')
                     @yield('informasiprakerin')
+                    @yield('editinfoprak')
+                    @yield('trashsiswa')
+                    @yield('trashguru')
+                    @yield('trashpembagian')
+                    @yield('trashinfoprak')
 
                 </div>
                 <!-- /.container-fluid -->
