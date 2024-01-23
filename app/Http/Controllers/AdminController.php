@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PDF;
+
+
 
 class AdminController extends Controller
 {
@@ -64,5 +67,20 @@ class AdminController extends Controller
     public function trashinfoprak()
     {
         return view('admin.trash.trashinfoprak');
+    }
+
+    public function exportPdfPermohonan()
+    {
+        // $data = [
+        //     // Data yang ingin Anda masukkan ke dalam PDF
+        //     'title' => 'Contoh PDF',
+        //     'content' => 'Isi PDF disini...',
+        // ];
+
+        // $pdf = PDF::loadView('admin.pdf.suratpermohonan', $data);
+
+        // return $pdf->stream('document.pdf');
+
+        return view('admin.pdf.suratpermohonan');
     }
 }
