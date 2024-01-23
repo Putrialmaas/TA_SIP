@@ -77,6 +77,10 @@
                 <i class="fas fa-trash mr-2 ml-1"></i>
                 Trash</button></a>
 
+        <a href="{{ route('admin.pdf.suratpermohonan') }}"><button type="button" class="btn mt-2 mb-4 ml-2"
+                style="background-color: #ff0000; color: #ffffff; font-size: 16px;">
+                <i class="far fa-file-pdf mr-2 ml-1"></i>
+                PDF</button></a>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">

@@ -100,8 +100,8 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Surat Monitoring</a>
-                        <a class="collapse-item" href="#">Surat Penarikan</a>
+                        <a class="collapse-item" href="{{ route('guru.monitoring') }}">Surat Monitoring</a>
+                        <a class="collapse-item" href="{{ route('guru.penarikan') }}">Surat Penarikan</a>
                         
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Pengumpulan Laporan</a>
+                        <a class="collapse-item" href="{{ route('guru.pengumpulan') }}">Pengumpulan Laporan</a>
                         <a class="collapse-item" href="{{ route('guru.nilailaporan') }}">Nilai Laporan</a>
                         
                     </div>
@@ -378,6 +378,9 @@
                     @yield('dashboard')
                     @yield('siswabimbingan')
                     @yield('nilailaporan')
+                    @yield('pengumpulan')
+                    @yield('monitoring')
+                    @yield('penarikan')
                     
 
                 </div>
