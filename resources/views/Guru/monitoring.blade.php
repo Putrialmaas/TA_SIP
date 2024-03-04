@@ -16,95 +16,35 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Select</th>
                                 <th>NIS</th>
-                                <th>Nama</th>
+                                <th>Nama Siswa</th>
+                                <th>Kelas</th>
+                                <th>No. Telp Siswa</th>
                                 <th>Tempat Prakerin</th>
-                                <th>No. Telp</th>
+                                <th>No. Telp Tempat Prakerin</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="select" id="selectitem">
-                                        <label class="form-check-label" for="selectitem"></label>
-                                    </div>
-                                </td>
-                                <td>121</td>
-                                <td>Putri Almaas Auliasari</td>
-                                <td>PT EPSON</td>
-                                <td>085456544569</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="fas fa-print"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="select" id="selectitem">
-                                        <label class="form-check-label" for="selectitem"></label>
-                                    </div>
-                                </td>
-                                <td>122</td>
-                                <td>Galih Bayu Prakoso</td>
-                                <td>PT CISCO</td>
-                                <td>086912364589</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="fas fa-print"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="select" id="selectitem">
-                                        <label class="form-check-label" for="selectitem"></label>
-                                    </div>
-                                </td>
-                                <td>123</td>
-                                <td>Kirani Juli Andini</td>
-                                <td>PT ANIMASI MULTIMEDIA</td>
-                                <td>086712364589</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="fas fa-print"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="select" id="selectitem">
-                                        <label class="form-check-label" for="selectitem"></label>
-                                    </div>
-                                </td>
-                                <td>124</td>
-                                <td>Aleeya Auzara Himmatana</td>
-                                <td>CV ALANA JAYA</td>
-                                <td>082345617569</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="fas fa-print"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="select" id="selectitem">
-                                        <label class="form-check-label" for="selectitem"></label>
-                                    </div>
-                                </td>
-                                <td>125</td>
-                                <td>Putri Almira Ainurrizqi</td>
-                                <td>CV ROEMAH KOMPUTER</td>
-                                <td>082145783245</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="fas fa-print"></i>
-                                </td>
-                            </tr>
+                            @foreach ($dataBimbingans as $data)
+                                <tr>
+                                    <td>{{ $data['siswa']->NIS }}</td>
+                                    <td>{{ $data['siswa']->name }}</td>
+                                    <td>{{ $data['siswa']->kelas }}</td>
+                                    <td>{{ $data['siswa']->telp }}</td>
+                                    <td>{{ $data['permohonan']->tempat_prakerin }}</td>
+                                    <td>{{ $data['permohonan']->telp_tempat_prakerin }}</td>
+                                    <td style="display: flex; justify-content: center; align-item:center;">
+                                        <a href="{{ route('guru.suratmonitoring', $data['bimbingan']->id) }}"><button
+                                                type="button" class="btn" style="color: #000000;">
+                                                <i class="fa-solid fa-print" style="color: #000000"></i></button></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="cetakitem">
+                {{-- <div class="cetakitem">
                     <button type="button" class="btn mt-3"
                         style="background-color: #4f4e4c; color: #ffffff; font-size: 16px;" data-toggle="modal"
                         data-target="#modalCetakitem">Print Item</button>
@@ -135,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </body>

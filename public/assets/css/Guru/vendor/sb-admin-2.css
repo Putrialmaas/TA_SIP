@@ -91,8 +91,6 @@ body {
     outline: 0 !important;
 }
 
-
-
 .Judul {
     font-family: Poppins;
     font-size: 28px;
@@ -100,6 +98,17 @@ body {
     font-weight: 900;
     line-height: normal;
     color: #000000;
+}
+
+@media (max-width: 768px) {
+    .Judul {
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        color: #000000;
+    }
 }
 
 .sub-judul {
@@ -131,33 +140,33 @@ body {
 }
 
 .circle2 {
-  display: flex;
-  justify-content: center;
-  width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  border: 5px solid #E57272; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
-  border-radius: 50%;
-  margin: 0 auto; /* Mengatur ke tengah secara horizontal */
+    display: flex;
+    justify-content: center;
+    width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    border: 5px solid #e57272; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
+    border-radius: 50%;
+    margin: 0 auto; /* Mengatur ke tengah secara horizontal */
 }
 
 .circle3 {
-  display: flex;
-  justify-content: center;
-  width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  border: 5px solid #44B158; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
-  border-radius: 50%;
-  margin: 0 auto; /* Mengatur ke tengah secara horizontal */
+    display: flex;
+    justify-content: center;
+    width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    border: 5px solid #44b158; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
+    border-radius: 50%;
+    margin: 0 auto; /* Mengatur ke tengah secara horizontal */
 }
 
 .circle4 {
-  display: flex;
-  justify-content: center;
-  width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
-  border: 5px solid #317DA8; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
-  border-radius: 50%;
-  margin: 0 auto; /* Mengatur ke tengah secara horizontal */
+    display: flex;
+    justify-content: center;
+    width: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    height: 90px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    border: 5px solid #317da8; /* Warna dan ketebalan garis sesuaikan dengan preferensi Anda */
+    border-radius: 50%;
+    margin: 0 auto; /* Mengatur ke tengah secara horizontal */
 }
 
 .data {
@@ -2202,14 +2211,12 @@ textarea.form-control {
 .form-check {
     position: relative;
     display: block;
-    padding-left: 2rem;
-    text-align: center;
-    /* justify-content: center; */
+    padding-left: 1.25rem;
 }
 
 .form-check-input {
     position: absolute;
-    margin-top: 0.6rem;
+    margin-top: 0.3rem;
     margin-left: -1.25rem;
 }
 
@@ -4962,18 +4969,18 @@ input[type="button"].btn-block {
 }
 
 .card2 {
-  background-color: #F4DDDD;
-  border-radius: 15px;
+    background-color: #f4dddd;
+    border-radius: 15px;
 }
 
 .card3 {
-  background-color: #D0EFA9;
-  border-radius: 15px;
+    background-color: #d0efa9;
+    border-radius: 15px;
 }
 
 .card4 {
-  background-color: #C7D6F5;
-  border-radius: 15px;
+    background-color: #c7d6f5;
+    border-radius: 15px;
 }
 
 .card-title {
@@ -8268,7 +8275,8 @@ button.bg-dark:focus {
 
 .ml-3,
 .mx-3 {
-    margin-left: 1rem !important;
+    margin-left: 0.5rem !important;
+    margin-top: 0.1rem !important;
 }
 
 .m-4 {
@@ -10916,6 +10924,7 @@ a:focus {
     min-width: 10rem;
     font-size: 0.85rem;
     margin: 0 0 1rem 0;
+    background-color: #102691;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-header,
@@ -10942,7 +10951,7 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-    background-color: #102691;
+    background-color: #224abe;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
@@ -11842,15 +11851,46 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
-    padding: 2rem 0;
+    padding: 1rem 0;
     flex-shrink: 0;
+    background-color: #224abe;
 }
 
 footer.sticky-footer .copyright {
     line-height: 1;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: white;
 }
 
 body.sidebar-toggled footer.sticky-footer {
     width: 100%;
+}
+
+.avatar {
+    background: #d4d4d4;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1.28;
+    height: 35px;
+    width: 35px;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.avatar[data-initial]::before {
+    color: black;
+    content: attr(data-initial);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
