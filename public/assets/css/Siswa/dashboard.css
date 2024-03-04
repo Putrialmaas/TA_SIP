@@ -4,9 +4,8 @@
     font-family: Poppins;
 }
 
-
 .nav-item .nav-link.active1 {
-    color: #FFA901;
+    color: #ffa901;
 }
 
 .judulcard {
@@ -20,7 +19,20 @@
     margin-top: 24px;
 }
 
-.card.ms-4.shadow {
+@media (max-width: 500px) {
+    .judulcard {
+        text-align: center;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #000000;
+        margin-top: 24px;
+    }
+}
+
+.card.card1.shadow {
     border-radius: 15px;
 }
 
@@ -28,23 +40,22 @@
     margin-bottom: 60px;
     padding-bottom: 40px;
 }
-.card.ms-4 .card-body {
-    background-color: #FBD9D999; 
-    padding-left:40px; 
-    padding-right:40px; 
-    border-radius: 15px
+.card.card1 .card-body {
+    background-color: #dbe6ff;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 15px;
 }
-
 
 .card-title {
     padding-top: 10px;
-    font-family: Poppins; 
-    font-weight: 700; 
+    font-family: Poppins;
+    font-weight: 700;
     font-size: 20px;
-    font-style: normal; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-text.mt-4 {

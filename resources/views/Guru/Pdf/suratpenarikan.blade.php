@@ -26,7 +26,7 @@
                     <td colspan="2" height="15"></td>
                 </tr>
                 <tr>
-                    <td><img src="assets/img/logoJateng.png" width="80" height="80" /></td>
+                    <td><img src="{{ asset('assets/img/logoJateng.png') }}" width="80" height="80" /></td>
                     <td>
                         <center>
                             <font size="3"><b>PEMERINTAH PROVINSI JAWA TENGAH</b></font><br>
@@ -54,9 +54,9 @@
             <tr>
                 <td width="15">Nomor</td>
                 <td width="10"> :</td>
-                <td width="203">423.4 /..... / 2023</td>
+                <td width="203"> 423.4 /..... / 2024 </td>
                 <td rowspan="5" width="30"></td>
-                <td>Adiwerna, 28 Agustus 2023</td>
+                <td>Adiwerna, ...........................................</td>
                 <td rowspan="5" width="20"></td>
             </tr>
             <tr>
@@ -77,9 +77,9 @@
                 <td colspan="3"></td>
                 <td width="250" align="justify">Kepada Yth. Pimpinan
                     <br>
-                    <b>PT. Manunggal Kabel Indonesia</b>
+                    <b>{{ $dataBimbingans[0]['permohonan']->tempat_prakerin }}</b>
                     <br>
-                    Pengasinan, Maribaya, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181
+                    {{ $dataBimbingans[0]['permohonan']->alamat_tempat_prakerin }}
                     <br>
                     di _
                     <br>
@@ -96,21 +96,21 @@
                         <p style="text-indent: 30px; text-align: justify; margin-top: 5px; margin-bottom:0px">
                             Menindaklanjuti pelaksanaan kegiatan Praktik Kerja Lapangan (PKL) peserta didik kelas XII
                             untuk Konsentrasi Keahlian Teknik Komputer dan Jaringan tahun pelajaran 2023/2024 akan telah
-                            berjalan di Instansi/Industri/Perusahaan <b>PT. Manunggal Kabel Indonesia</b> yang Bapak/Ibu
+                            berjalan di Instansi/Industri/Perusahaan <b>{{ $dataBimbingans[0]['permohonan']->tempat_prakerin }}</b> yang Bapak/Ibu
                             pimpin.
                         </p>
                         <p style="text-indent: 30px; margin-top: 5px; margin-bottom: 0px">
                             Selanjutnya kami sampaikan penghargaan dan terimakasih atas kesempatan yang telah diberikan
-                            kepada siswa/siswi kami yang telah melaksanakan kegiatan PKL di <b>PT. Manunggal Kabel
-                                Indonesia</b>, sehingga kegiatan ini dapat terlaksana sebagaimana mestinya. Apabila
+                            kepada siswa/siswi kami yang telah melaksanakan kegiatan PKL di <b>{{ $dataBimbingans[0]['permohonan']->tempat_prakerin }}</b>
+                            , sehingga kegiatan ini dapat terlaksana sebagaimana mestinya. Apabila
                             selama
                             pelaksanaan PKL ada hal-hal yang kurang berkenan kami mohon maaf sebesar-besarnya. Kami
                             harap, kerjasama yang telah terjalin dengan baik selama ini dapat terus berlangsung,
                             sehingga untuk periode yang akan datang siswa/siswi kami dapat melaksanakan kegiatan PKL di
-                            <b>PT. Manunggal Kabel Indonesia</b>.
+                            <b>{{ $dataBimbingans[0]['permohonan']->tempat_prakerin }}</b>.
                         </p>
                         <p style="text-indent: 30px; margin-top: 5px; margin-bottom: 0px">
-                            Sebagai tambahan informasi pelaksanaan PKL akan berakhir di tanggal <b>30 November 2023</b>
+                            Sebagai tambahan informasi pelaksanaan PKL akan berakhir di tanggal <b>{{ isset($dataBimbingans[0]['permohonan']->tanggal_selesai) ? App\Helpers\MyHelpers::getIndonesianDate($dataBimbingans[0]['permohonan']->tanggal_selesai) : '' }}</b>
                             sesuai
                             dengan surat permohonan yang sebelumnya kami ajukan. Apabila dalam kegiatan PKL ini,
                             Instansi/Industri/Perusahaan dirasa perlu menambah durasi waktu pelaksanaan kami pihak

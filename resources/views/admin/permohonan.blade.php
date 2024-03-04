@@ -1,22 +1,52 @@
 @extends('admin.layout')
 @section('permohonan')
 
+    <style>
+        .alert-floating {
+            position: fixed;
+            max-width: 100%;
+            /* Set maksimum lebar notifikasi sesuai lebar parent */
+            width: auto;
+            /* Biarkan lebar menyesuaikan isi notifikasi */
+            top: 11vh;
+            right: 7vh;
+            z-index: 1050;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Temukan notifikasi
+            var alertFloating = document.querySelector('.alert-floating');
+
+            // Tambahkan event listener untuk mendeteksi klik di luar notifikasi
+            document.addEventListener("click", function(event) {
+                if (event.target !== alertFloating) {
+                    alertFloating.style.display =
+                        'none'; // Sembunyikan notifikasi jika diklik di luar notifikasi
+                }
+            });
+        });
+    </script>
+
 
     <body>
         <div class="Judul">Permohonan Prakerin</div>
-        <button type="button" class="btn mt-2 mb-4" style="background-color: #44B158; color: #ffffff; ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus"
-                viewBox="0 0 18 18">
-                <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-            </svg>
-            Tambah Data</button>
-
+        @if (session('success'))
+            <div class="alert alert-success alert-floating">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger alert-floating">
+                {{ session('error') }}
+            </div>
+        @endif
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4" style="margin-top: 4vh">
             <div class="card-header py-3">
                 <p class="sub-judul m-0">
-                    Data Permohonan Prakerin
+                    List Data
                 </p>
             </div>
             <div class="card-body">
@@ -28,127 +58,152 @@
                                 <th>Nama</th>
                                 <th>Jurusan</th>
                                 <th>Tempat Prakerin</th>
-                                <th>Anggota Kelompok</th>
+                                <th>Balasan</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>2009/01/12</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Cedric Kelly</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2012/03/29</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Airi Satou</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>33</td>
-                                <td>2008/11/28</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Brielle Williamson</td>
-                                <td>Integration Specialist</td>
-                                <td>New York</td>
-                                <td>61</td>
-                                <td>2012/12/02</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Herrod Chandler</td>
-                                <td>Sales Assistant</td>
-                                <td>San Francisco</td>
-                                <td>59</td>
-                                <td>2012/08/06</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Rhona Davidson</td>
-                                <td>Integration Specialist</td>
-                                <td>Tokyo</td>
-                                <td>55</td>
-                                <td>2010/10/14</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Colleen Hurst</td>
-                                <td>Javascript Developer</td>
-                                <td>San Francisco</td>
-                                <td>39</td>
-                                <td>2009/09/15</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Sonya Frost</td>
-                                <td>Software Engineer</td>
-                                <td>Edinburgh</td>
-                                <td>23</td>
-                                <td>2008/12/13</td>
-                                <td style="display: flex; justify-content: center; align-item:center;">
-                                    <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt ml-3"></i>
-                                </td>
-                            </tr>
+                            @foreach ($dataPermohonan as $data)
+                                <tr>
+                                    <td>{{ $data->NIS }}</td>
+                                    <td>{{ $data->siswa->name }}</td>
+                                    <td style="width: 200px;">
+                                        {{ isset($data->siswa->jurusan) ? $jurusanMapping[$data->siswa->jurusan] : '' }}
+                                    </td>
+                                    <td>{{ $data->tempat_prakerin }}</td>
+                                    <td style="max-width: 200px;">
+                                        <a href="{{ $data['balasan'] ?? '#' }}"
+                                            target="_blank">{{ $data['balasan'] ?? ' ' }}</a>
+                                    </td>
+                                    <td><?= $data['status'] ?></td>
+                                    <td style="min-width: 140px; max-width: 140px; width: 140px;">
+                                        <div class="editdata">
+                                            <button id="edit" type="button" class="btn edit-button"
+                                                data-toggle="tooltip" data-placement="top" data-title="Edit Data"
+                                                style="color: #000000">
+                                                <a href="{{ route('admin.permohonaneditview', $data->id) }}"><i
+                                                        class="far fa-edit" style="color: #000000"></i></a>
+                                            </button>
+                                            <button id="cetak" type="button" class="btn edit-button"
+                                                data-toggle="tooltip" data-placement="top"
+                                                data-title="Cetak Surat Permohonan" style="color: #000000">
+                                                <a href="{{ route('admin.suratpermohonan', $data->id) }}"><i
+                                                        class="fa-solid fa-print" style="color: #000000"></i></a>
+                                            </button>
+                                            <button type="button" class="btn" style="color: #000000" data-toggle="modal"
+                                                data-target="#modalStatus{{ $data->id }}" data-placement="top"
+                                                data-title="Ubah Status Permohonan" onmouseover="showTooltip(this)"
+                                                onmouseleave="hideTooltip(this)" onclick="hideTooltip(this)">
+                                                <i
+                                                    class="fa-solid
+                                                fa-arrows-rotate"></i>
+                                            </button>
+                                            {{-- <button type="button" class="btn" style="color: #000000" data-toggle="modal"
+                                        data-target="#modalHapus{{ $data->id }}">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button> --}}
+
+                                            <div class="modal fade" id="modalStatus{{ $data->id }}" role="dialog"
+                                                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+
+                                                        <form method="POST"
+                                                            action="{{ route('status.permohonan', $data->id) }}">
+                                                            @csrf
+                                                            <p
+                                                                style="display: flex; align-items:center; justify-content:center; 
+                                                    text-align:center; font-weight:600; font-size:20px; margin-top: 1rem;">
+                                                                Ubah status permohonan prakerin siswa</p>
+                                                            <div class="modalfoot mt-3 mb-3"
+                                                                style="display:flex; justify-content: center; align-items:center;">
+                                                                <button type="submit" class="btn ml-2" name="btnMengajukan"
+                                                                    style="background-color: #efaa4f; color: #ffffff; font-size: 16px; 
+                                                        font-family: Poppins;">Mengajukan</button>
+                                                                <button type="submit" class="btn ml-2" name="btnDiterima"
+                                                                    style="background-color: #44B158; color: #ffffff; font-size: 16px; 
+                                                        font-family: Poppins;">Diterima</button>
+                                                                <button type="button" class="btn ml-2"
+                                                                    style="background-color: #ff0000; 
+                                                        color: #ffffff; font-size: 16px; 
+                                                        font-family: Poppins;"
+                                                                    data-toggle="modal"data-target="#modalHapus{{ $data->id }}">Ditolak
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="modalHapus{{ $data->id }}" role="dialog"
+                                                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body"
+                                                            style="display: flex; align-items:center; justify-content:center; text-align:center; ">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="50"
+                                                                height="50" style="color:#EF4F4F" fill="currentColor"
+                                                                class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                <path
+                                                                    d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                                                            </svg>
+                                                        </div>
+                                                        <form method="POST"
+                                                            action="{{ route('hapus.permohonan', $data->id) }}">
+                                                            @csrf
+                                                            <p
+                                                                style="display: flex; align-items:center; justify-content:center; text-align:center; font-weight:600; font-size:20px">
+                                                                Apakah Anda yakin ingin menghapus data?</p>
+                                                            <div class="modalfoot mt-3 mb-3"
+                                                                style="display:flex; justify-content: center; align-items:center;">
+                                                                <button type="button" class="btn mr-2"
+                                                                    data-dismiss="modal"
+                                                                    style="background-color: #EF4F4F; color: #ffffff; font-size: 16px; font-family: Poppins;">Tidak</button>
+                                                                <button type="submit" class="btn ml-2"
+                                                                    style="background-color: #44B158; color: #ffffff; font-size: 16px; font-family: Poppins;">Ya,
+                                                                    Hapus Saja!</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Fungsi untuk menampilkan tooltip
+            function showTooltip(element) {
+                if (!$(element).hasClass('tooltip-visible')) {
+                    $(element).tooltip('show');
+                    $(element).addClass('tooltip-visible');
+                }
+            }
+
+            // Fungsi untuk menyembunyikan tooltip
+            function hideTooltip(element) {
+                $(element).removeClass('tooltip-visible');
+            }
+
+            // Menyembunyikan tooltip saat modal tertutup
+            $('#modalStatus{{ $data->id }}').on('hidden.bs.modal', function() {
+                $('.btn').tooltip('hide');
+            });
+        </script>
+
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
     </body>
 
 @stop
@@ -158,7 +213,7 @@
         $('#dataTable').DataTable({
             "columnDefs": [{
                 "orderable": false,
-                "targets": 5
+                "targets": 6
             }]
         });
     </script>

@@ -4,16 +4,55 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{{asset('assets/img/logosmk.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/img/logosmk.png') }}" type="image/x-icon">
     <title>SISTEM PRAKERIN SMKN 1 ADIWERNA</title>
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css') }}"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        href="{{ asset('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i') }}"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css') }}" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/welcome.css">
+    <link rel="stylesheet"
+        href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{ asset('assets/css/welcome.css') }}">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+
+    <script src="{{ asset('https://code.jquery.com/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js') }}"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8f+5l8z9tcy6CDw8vF6/sFZ5f5cuUZ/hr9L/6zP5qr8vuUHV8fbz4uqj7f5C" crossorigin="anonymous">
+    </script>
+
 </head>
 
 <body>
@@ -22,18 +61,19 @@
     <nav class="navbar fixed-top justify-content-between navbar-expand-lg">
         <div class="logo">
             <a class="navbar-brand-two d-inline-block ml-1" href="#">
-                <img src="assets/img/logosmk.png" alt="Logo" width="40" height="40" class="logo-navbar" />
+                <img src="{{ asset('assets/img/logosmk.png') }}" alt="Logo" width="40" height="40"
+                    class="logo-navbar" />
             </a>
             <div class="navbar-brand">
                 <a href="{{ route('welcome') }}" style="text-decoration: none;">
                     <strong class="text-white">
                         SEKOLAH MENENGAH KEJURUAN
-                    <br>NEGERI 1 ADIWERNA
+                        <br>NEGERI 1 ADIWERNA
                     </strong>
                 </a>
             </div>
         </div>
-        <a href="{{ route('login') }}">
+        <a href="{{ route('login') }}" style="text-decoration: none;">
             <button type="button" class="d-flex btn btn-outline-light">Login</button>
         </a>
 
@@ -42,15 +82,18 @@
     @yield('content')
     @yield('informasiprak')
     @yield('detail')
+
     {{-- <div class="isi">
         
     </div> --}}
+</body>
 
+<footer>
     {{-- Footer --}}
     <div class="footer">
         <div class="logo">
             <div class="logo-footer">
-                <img src="assets/img/logosmk.png" alt="Logo" class="logo-image-size" />
+                <img src="{{ asset('assets/img/logosmk.png') }}" alt="Logo" class="logo-image-size" />
             </div>
             <div style="width: 50%; height: 100%; margin-right: auto;">
                 <div class="contact">
@@ -92,21 +135,18 @@
             </div>
             <div class="maps">
                 <a href="https://maps.app.goo.gl/qY8YSmcHdRYQUUFr7">
-                    <img src="assets/img/maps_sekolah.png" alt="Foto" class="maps-image-size" />
+                    <img src="{{ asset('assets/img/maps_sekolah.png') }}" alt="Foto" class="maps-image-size" />
                 </a>
             </div>
         </div>
     </div>
     <div class="cpr">
-        <div class="d-flex justify-content-center style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="d-flex justify-content-center style="background-color: rgba(0, 0, 0, 0.2);>
             <div class="copyright">
-                © 2023 SMK NEGERI 1 ADIWERNA
+                © SMK NEGERI 1 ADIWERNA
             </div>
         </div>
     </div>
-    </section>
-
-    
-</body>
+</footer>
 
 </html>
